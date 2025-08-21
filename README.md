@@ -1,4 +1,4 @@
-### Introduction
+# Introduction
 
 This is a RLHF project using DPO on Breeze7b. Let it prefer Anime live-action.
 
