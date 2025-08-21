@@ -1,0 +1,35 @@
+[project]
+name = "RLHFDPOBreeze7b"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Sakuya0229",email = "a1301145@gmail.com"}
+]
+requires-python = "3.11.0"
+dependencies = [
+    "transformers (>=4.55.0,<5.0.0)",
+    "bitsandbytes (>=0.47.0,<0.48.0)",
+    "datasets (>=4.0.0,<5.0.0)",
+    "peft (>=0.17.0,<0.18.0)",
+    "torch (>=2.8.0,<3.0.0)",
+    "sentencepiece (>=0.2.1,<0.3.0)",
+    "colorama (>=0.4.6,<0.5.0)",
+    "fsspec (==2025.3.0)",
+    "protobuf (>=6.31.1,<7.0.0)",
+    "gdown (>=5.2.0,<6.0.0)",
+    "trl (>=0.21.0,<0.22.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "pytorch-gpu"
+url = "https://download.pytorch.org/whl/cu128"
+priority = "explicit"
+
+
+[tool.poetry.dependencies]
+torch = {source = "pytorch-gpu"}
